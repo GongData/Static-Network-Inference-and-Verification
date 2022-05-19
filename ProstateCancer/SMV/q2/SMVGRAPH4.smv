@@ -1,0 +1,162 @@
+MODULE main
+
+  VAR
+
+		ALOX15: {-1, 0, 1};
+		ALOX15B: {-1, 0, 1};
+		ANPEP: {-1, 0, 1};
+		CNTNAP2: {-1, 0, 1};
+		ERG: {-1, 0, 1};
+		F5: {-1, 0, 1};
+		GDF15: {-1, 0, 1};
+		GHR: {-1, 0, 1};
+		HPGD: {-1, 0, 1};
+		HPN: {-1, 0, 1};
+		IL6: {-1, 0, 1};
+		IL8: {-1, 0, 1};
+		KRT5: {-1, 0, 1};
+		PLA2G7: {-1, 0, 1};
+		PLAUR: {-1, 0, 1};
+		SERPINB5: {-1, 0, 1};
+		TRIM29: {-1, 0, 1};
+
+
+    ASSIGN
+
+		init(ALOX15) := {-1, 0};
+		init(ALOX15B) := {-1, 0};
+		init(ANPEP) := {-1, 0};
+		init(CNTNAP2) := {-1, 0};
+		init(ERG) := {-1, 0};
+		init(F5) := {-1, 0};
+		init(GDF15) := {-1, 0};
+		init(GHR) := {-1, 0};
+		init(HPGD) := {-1, 0};
+		init(HPN) := {-1, 0};
+		init(IL6) := {-1, 0};
+		init(IL8) := {-1, 0};
+		init(KRT5) := {-1, 0};
+		init(PLA2G7) := {-1, 0};
+		init(PLAUR) := {-1, 0};
+		init(SERPINB5) := {-1, 0};
+		init(TRIM29) := {-1, 0};
+
+	 next(ALOX15) := ALOX15;
+
+	 next(ALOX15B) := 
+		 case 
+ 			  -1268*TRIM29 > 0  : 1; 
+ 			  -1268*TRIM29 = 0  : 0; 
+ 			  -1268*TRIM29 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(ANPEP) := 
+		 case 
+ 			  6752*ERG > 0  : 1; 
+ 			  6752*ERG = 0  : 0; 
+ 			  6752*ERG < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(CNTNAP2) := CNTNAP2;
+
+	 next(ERG) := ERG;
+
+	 next(F5) := 
+		 case 
+ 			  6615*PLAUR > 0  : 1; 
+ 			  6615*PLAUR = 0  : 0; 
+ 			  6615*PLAUR < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(GDF15) := 
+		 case 
+ 			  -6615*HPN > 0  : 1; 
+ 			  -6615*HPN = 0  : 0; 
+ 			  -6615*HPN < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(GHR) := 
+		 case 
+ 			  1268*TRIM29 > 0  : 1; 
+ 			  1268*TRIM29 = 0  : 0; 
+ 			  1268*TRIM29 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(HPGD) := 
+		 case 
+ 			  1453*PLAUR > 0  : 1; 
+ 			  1453*PLAUR = 0  : 0; 
+ 			  1453*PLAUR < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(HPN) := 
+		 case 
+ 			  1453*ALOX15B > 0  : 1; 
+ 			  1453*ALOX15B = 0  : 0; 
+ 			  1453*ALOX15B < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(IL6) := 
+		 case 
+ 			  -3299*ALOX15B > 0  : 1; 
+ 			  -3299*ALOX15B = 0  : 0; 
+ 			  -3299*ALOX15B < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(IL8) := 
+		 case 
+ 			  139*PLAUR +  -4845*HPGD > 0  : 1; 
+ 			  139*PLAUR +  -4845*HPGD = 0  : 0; 
+ 			  139*PLAUR +  -4845*HPGD < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(KRT5) := 
+		 case 
+ 			  3206*TRIM29 > 0  : 1; 
+ 			  3206*TRIM29 = 0  : 0; 
+ 			  3206*TRIM29 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(PLA2G7) := 
+		 case 
+ 			  2157*HPGD +  -2288*ANPEP > 0  : 1; 
+ 			  2157*HPGD +  -2288*ANPEP = 0  : 0; 
+ 			  2157*HPGD +  -2288*ANPEP < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(PLAUR) := 
+		 case 
+ 			  8974*KRT5 > 0  : 1; 
+ 			  8974*KRT5 = 0  : 0; 
+ 			  8974*KRT5 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(SERPINB5) := 
+		 case 
+ 			  -6615*HPN > 0  : 1; 
+ 			  -6615*HPN = 0  : 0; 
+ 			  -6615*HPN < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(TRIM29) := 
+		 case 
+ 			  -7621*HPN > 0  : 1; 
+ 			  -7621*HPN = 0  : 0; 
+ 			  -7621*HPN < 0  : -1; 
+ 			 
+ 		 esac; 
+
+

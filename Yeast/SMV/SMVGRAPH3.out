@@ -1,0 +1,18 @@
+{
+/* description */ "(AG ((RRP12=1) ->(AF (SNU66=-1)))) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1432606500
+{
+}
+}
+{
+/* description */ "(AG (((SNU66=1) ->(AF (TEA1=1)))&((TEA1=1) ->(AF (SNU66<=0))))) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1432606500
+{
+}
+}

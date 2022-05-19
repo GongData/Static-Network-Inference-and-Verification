@@ -1,0 +1,36 @@
+digraph {
+node[shape=box];
+    1 [label="ALOX15B"];
+    2 [label="ANPEP"];
+    4 [label="ERG"];
+    5 [label="F5"];
+    6 [label="GDF15"];
+    7 [label="GHR"];
+    8 [label="HPGD"];
+    9 [label="HPN"];
+    10 [label="IL6"];
+    11 [label="IL8"];
+    12 [label="KRT5"];
+    13 [label="PLA2G7"];
+    14 [label="PLAUR"];
+    15 [label="SERPINB5"];
+    16 [label="TRIM29"];
+16->1[arrowhead = dot, label=-1268];
+4->2[label=4599];
+14->2[arrowhead = dot, label=-154];
+14->5[label=6615];
+9->6[arrowhead = dot, label=-6615];
+16->7[label=1268];
+14->8[label=1453];
+1->9[label=1453];
+1->10[arrowhead = dot, label=-3299];
+8->11[arrowhead = dot, label=-4845];
+14->11[label=139];
+16->12[label=3206];
+2->13[arrowhead = dot, label=-2288];
+8->13[label=2157];
+12->14[label=8974];
+9->15[arrowhead = dot, label=-6615];
+9->16[arrowhead = dot, label=-7621];
+}
+

@@ -1,0 +1,27 @@
+graph t_static40{
+
+
+ALOX15--ERG;
+ALOX15B--ANPEP;
+ALOX15B--ERG;
+ERG--F5;
+ERG--GHR;
+ERG--HPGD;
+ERG--PLA2G7;
+IL6--IL8;
+IL6--PLAUR;
+KRT5--TRIM29;
+SERPINB5--TRIM29;}
+
+
+
+
+
+
+
+
+
+
+
+
+

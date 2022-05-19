@@ -1,0 +1,152 @@
+MODULE main
+
+  VAR
+
+		ADA2: {-1, 0, 1};
+		CGR1: {-1, 0, 1};
+		DAK2: {-1, 0, 1};
+		FMT1: {-1, 0, 1};
+		GIT1: {-1, 0, 1};
+		HOS2: {-1, 0, 1};
+		MRPL4: {-1, 0, 1};
+		RPA12: {-1, 0, 1};
+		RRP12: {-1, 0, 1};
+		SNU66: {-1, 0, 1};
+		SPB1: {-1, 0, 1};
+		SWF1: {-1, 0, 1};
+		TEA1: {-1, 0, 1};
+		VRP1: {-1, 0, 1};
+		YOX1: {-1, 0, 1};
+		ZDS1: {-1, 0, 1};
+
+
+    ASSIGN
+
+		init(ADA2) := {-1, 0};
+		init(CGR1) := {-1, 0};
+		init(DAK2) := {-1, 0};
+		init(FMT1) := {-1, 0};
+		init(GIT1) := {-1, 0};
+		init(HOS2) := {-1, 0};
+		init(MRPL4) := {-1, 0};
+		init(RPA12) := {-1, 0};
+		init(RRP12) := {-1, 0};
+		init(SNU66) := {-1, 0};
+		init(SPB1) := {-1, 0};
+		init(SWF1) := {-1, 0};
+		init(TEA1) := {-1, 0};
+		init(VRP1) := {-1, 0};
+		init(YOX1) := {-1, 0};
+		init(ZDS1) := {-1, 0};
+
+	 next(ADA2) := 
+		 case 
+ 			  -89*SWF1 +  -367*MRPL4 > 0  : 1; 
+ 			  -89*SWF1 +  -367*MRPL4 = 0  : 0; 
+ 			  -89*SWF1 +  -367*MRPL4 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(CGR1) := 
+		 case 
+ 			  -2400*GIT1 +  -2222*ADA2 > 0  : 1; 
+ 			  -2400*GIT1 +  -2222*ADA2 = 0  : 0; 
+ 			  -2400*GIT1 +  -2222*ADA2 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(DAK2) := 
+		 case 
+ 			  -1157*MRPL4 > 0  : 1; 
+ 			  -1157*MRPL4 = 0  : 0; 
+ 			  -1157*MRPL4 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(FMT1) := 
+		 case 
+ 			  2744*MRPL4 > 0  : 1; 
+ 			  2744*MRPL4 = 0  : 0; 
+ 			  2744*MRPL4 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(GIT1) := 
+		 case 
+ 			  -4622*SNU66 +  -178*CGR1 > 0  : 1; 
+ 			  -4622*SNU66 +  -178*CGR1 = 0  : 0; 
+ 			  -4622*SNU66 +  -178*CGR1 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(HOS2) := 
+		 case 
+ 			  -4438*GIT1 > 0  : 1; 
+ 			  -4438*GIT1 = 0  : 0; 
+ 			  -4438*GIT1 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(MRPL4) := MRPL4;
+
+	 next(RPA12) := 
+		 case 
+ 			  4533*SWF1 +  -58*SNU66 > 0  : 1; 
+ 			  4533*SWF1 +  -58*SNU66 = 0  : 0; 
+ 			  4533*SWF1 +  -58*SNU66 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(RRP12) := 
+		 case 
+ 			  4533*SWF1 +  -58*SNU66 > 0  : 1; 
+ 			  4533*SWF1 +  -58*SNU66 = 0  : 0; 
+ 			  4533*SWF1 +  -58*SNU66 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(SNU66) := 
+		 case 
+ 			  -4649*TEA1 +  4649*HOS2 > 0  : 1; 
+ 			  -4649*TEA1 +  4649*HOS2 = 0  : 0; 
+ 			  -4649*TEA1 +  4649*HOS2 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(SPB1) := 
+		 case 
+ 			  4533*SWF1 +  -58*SNU66 > 0  : 1; 
+ 			  4533*SWF1 +  -58*SNU66 = 0  : 0; 
+ 			  4533*SWF1 +  -58*SNU66 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(SWF1) := 
+		 case 
+ 			  -2222*TEA1 +  2206*FMT1 > 0  : 1; 
+ 			  -2222*TEA1 +  2206*FMT1 = 0  : 0; 
+ 			  -2222*TEA1 +  2206*FMT1 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(TEA1) := 
+		 case 
+ 			  387*ZDS1 +  4684*RPA12 > 0  : 1; 
+ 			  387*ZDS1 +  4684*RPA12 = 0  : 0; 
+ 			  387*ZDS1 +  4684*RPA12 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(VRP1) := VRP1;
+
+	 next(YOX1) := 
+		 case 
+ 			  -2368*TEA1 +  -2191*HOS2 > 0  : 1; 
+ 			  -2368*TEA1 +  -2191*HOS2 = 0  : 0; 
+ 			  -2368*TEA1 +  -2191*HOS2 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(ZDS1) := ZDS1;
+
+

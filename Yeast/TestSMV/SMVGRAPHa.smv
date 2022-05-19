@@ -1,0 +1,176 @@
+MODULE main
+
+  VAR
+
+		ADA2: {-1, 0, 1};
+		CGR1: {-1, 0, 1};
+		DAK2: {-1, 0, 1};
+		FMT1: {-1, 0, 1};
+		GIT1: {-1, 0, 1};
+		HOS2: {-1, 0, 1};
+		MRPL4: {-1, 0, 1};
+		RPA12: {-1, 0, 1};
+		RRP12: {-1, 0, 1};
+		SNU66: {-1, 0, 1};
+		SPB1: {-1, 0, 1};
+		SWF1: {-1, 0, 1};
+		TEA1: {-1, 0, 1};
+		VRP1: {-1, 0, 1};
+		YOX1: {-1, 0, 1};
+		ZDS1: {-1, 0, 1};
+
+
+    ASSIGN
+
+		init(ADA2) := {-1, 0};
+		init(CGR1) := {-1, 0};
+		init(DAK2) := {-1, 0};
+		init(FMT1) := {-1, 0};
+		init(GIT1) := {-1, 0};
+		init(HOS2) := {-1, 0};
+		init(MRPL4) := {-1, 0};
+		init(RPA12) := {-1, 0};
+		init(RRP12) := {-1, 0};
+		init(SNU66) := {-1, 0};
+		init(SPB1) := {-1, 0};
+		init(SWF1) := {-1, 0};
+		init(TEA1) := {-1, 0};
+		init(VRP1) := {-1, 0};
+		init(YOX1) := {-1, 0};
+		init(ZDS1) := {-1, 0};
+
+	 next(ADA2) := 
+		 case 
+ 			  2442*MRPL4 +  2442*CGR1 > 0  : 1; 
+ 			  2442*MRPL4 +  2442*CGR1 = 0  : 0; 
+ 			  2442*MRPL4 +  2442*CGR1 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(CGR1) := 
+		 case 
+ 			  8706*FMT1 > 0  : 1; 
+ 			  8706*FMT1 = 0  : 0; 
+ 			  8706*FMT1 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(DAK2) := DAK2;
+
+	 next(FMT1) := 
+		 case 
+ 			  2400*SNU66 +  2400*HOS2 > 0  : 1; 
+ 			  2400*SNU66 +  2400*HOS2 = 0  : 0; 
+ 			  2400*SNU66 +  2400*HOS2 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(GIT1) := 
+		 case 
+ 			  -2469*MRPL4 +  -79*HOS2 +  -2432*FMT1 > 0  : 1; 
+ 			  -2469*MRPL4 +  -79*HOS2 +  -2432*FMT1 = 0  : 0; 
+ 			  -2469*MRPL4 +  -79*HOS2 +  -2432*FMT1 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(HOS2) := 
+		 case 
+ 			  -2279*TEA1 +  2018*MRPL4 > 0  : 1; 
+ 			  -2279*TEA1 +  2018*MRPL4 = 0  : 0; 
+ 			  -2279*TEA1 +  2018*MRPL4 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(MRPL4) := 
+		 case 
+ 			  -2222*TEA1 +  2222*SNU66 > 0  : 1; 
+ 			  -2222*TEA1 +  2222*SNU66 = 0  : 0; 
+ 			  -2222*TEA1 +  2222*SNU66 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(RPA12) := 
+		 case 
+ 			  4575*MRPL4 +  -4575*DAK2 > 0  : 1; 
+ 			  4575*MRPL4 +  -4575*DAK2 = 0  : 0; 
+ 			  4575*MRPL4 +  -4575*DAK2 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(RRP12) := 
+		 case 
+ 			  8706*CGR1 > 0  : 1; 
+ 			  8706*CGR1 = 0  : 0; 
+ 			  8706*CGR1 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(SNU66) := 
+		 case 
+ 			  -4779*TEA1 +  4518*SWF1 > 0  : 1; 
+ 			  -4779*TEA1 +  4518*SWF1 = 0  : 0; 
+ 			  -4779*TEA1 +  4518*SWF1 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(SPB1) := 
+		 case 
+ 			  8706*FMT1 > 0  : 1; 
+ 			  8706*FMT1 = 0  : 0; 
+ 			  8706*FMT1 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(SWF1) := 
+		 case 
+ 			  89*VRP1 +  89*ADA2 > 0  : 1; 
+ 			  89*VRP1 +  89*ADA2 = 0  : 0; 
+ 			  89*VRP1 +  89*ADA2 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(TEA1) := 
+		 case 
+ 			  8706*RRP12 > 0  : 1; 
+ 			  8706*RRP12 = 0  : 0; 
+ 			  8706*RRP12 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(VRP1) := 
+		 case 
+ 			  5983*RRP12 > 0  : 1; 
+ 			  5983*RRP12 = 0  : 0; 
+ 			  5983*RRP12 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(YOX1) := 
+		 case 
+ 			  -4706*ADA2 > 0  : 1; 
+ 			  -4706*ADA2 = 0  : 0; 
+ 			  -4706*ADA2 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(ZDS1) := 
+		 case 
+ 			  -4444*MRPL4 +  -4444*DAK2 > 0  : 1; 
+ 			  -4444*MRPL4 +  -4444*DAK2 = 0  : 0; 
+ 			  -4444*MRPL4 +  -4444*DAK2 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+
+
+SPEC CGR1 = 1 -> AX(RRP12 = 1)
+
+SPEC EG(TEA1 = 1 -> EF(SNU66 <=0) )
+
+SPEC AG(RRP12 = 1 -> AF(SNU66 = -1) )
+
+SPEC AG(CGR1=1 -> AF(MRPL4 < 0 & HOS2 < 0 & VRP1 = 1))
+
+SPEC EG((SWF1 = 1 | FMT1= 1 -> EF(RPA12 = 0 & GIT1 >= 0)))
+
+SPEC AG((SNU66 = 1 -> AF(TEA1 = 1)) & (TEA1 = 1 -> AF(SNU66 <= 0)))

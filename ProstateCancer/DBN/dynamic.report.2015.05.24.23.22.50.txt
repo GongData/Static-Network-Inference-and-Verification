@@ -1,0 +1,1268 @@
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                              banjo dynamic example
+- User:                                                                  demo
+- Dataset:                                 20-vars-2000-temporal-observations
+- Notes:                                   dynamic bayesian network inference
+-----------------------------------------------------------------------------
+- Settings file:                                                             
+-----------------------------------------------------------------------------
+- Input directory:  /Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Input/
+- Observations file:                                           Prostate17.txt
+- Number of observations (in file):                                        10
+- Number of observations used for learning DBN:                             9
+- Number of variables:                                                     17
+- Variable names:                                                      inFile
+- Discretization policy:                                                   q2
+- Exceptions to the discretization policy:                               none
+-----------------------------------------------------------------------------
+- Initial structure file:                                                    
+- 'Must be present' edges file:                                              
+- 'Must not be present' edges file:                                          
+- Min. Markov lag:                                                          1
+- Max. Markov lag:                                                          1
+- DBN mandatory identity lag(s):                                            1
+- Max. parent count:                                                        5
+- Equivalent sample size for Dirichlet parameter prior:                   1.0
+-----------------------------------------------------------------------------
+- Searcher:                                                    SearcherGreedy
+- Proposer:                                             ProposerAllLocalMoves
+- Evaluator:                                        defaulted to EvaluatorBDe
+- Decider:                                         defaulted to DeciderGreedy
+-----------------------------------------------------------------------------
+- Pre-compute logGamma:                                                   yes
+- Cache:                                                           fastLevel2
+- Cycle checking method:         Depth-first Search with Shmueli Optimization
+-----------------------------------------------------------------------------
+- Min. proposed networks after high score:                               1000
+- Min. proposed networks before restart:                                 3000
+- Max. proposed networks before restart:                                 5000
+- Restart method:                                          use random network
+-   with max. parent count:                                                 5
+-----------------------------------------------------------------------------
+- Output directory:  /Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output/
+- Report file:                         dynamic.report.2015.05.24.23.22.50.txt
+- Number of best networks tracked:                                          5
+- Best networks are:                                             nonidentical
+- Max. time:                                                            1.0 m
+- Min. networks before checking:                                         1000
+- Screen reporting interval:                                           20.0 s
+- File reporting interval:                                              1.0 m
+-----------------------------------------------------------------------------
+- Compute influence scores:                                               yes
+- Compute consensus graph:                                                yes
+- Create consensus graph as HTML:                                         yes
+- Create 'dot' output:                                                    yes
+- Location of 'dot':                               /Applications/Graphviz.app
+-----------------------------------------------------------------------------
+- XML output directory:  /Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output/
+- XML Report file:                                                           
+- XML settings to export:                                                    
+- XML parser:                             org.apache.xerces.parsers.SAXParser
+- Banjo XML format version:                                               1.0
+-----------------------------------------------------------------------------
+- Seed for starting search:                                     1432524170691
+-----------------------------------------------------------------------------
+- Number of threads:                                                        1
+-----------------------------------------------------------------------------
+- Warnings:                                                                  
+-----------------------------------------------------------------------------
+(Alert: default applied.) Default value ('banjo.txt') applied to 'settingsFile' parameter.
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+-----------------------------------------------------------------------------
+
+Memory info before starting the search: Banjo is using 1 mb of memory
+
+-----------------------------------------------------------------------------
+- Pre-processing                                        Discretization report
+-----------------------------------------------------------------------------
+ Variable | Discr. | Min. Val. | Max. Val. |  Orig. |  Used  |               
+          |        |           |           | points | points |               
+-----------------------------------------------------------------------------
+      0   |    q2  | 4.344203  | 8.367752  |     9  |     2  |
+      1   |    q2  |  0.12489007  |  0.44021738  |     9  |     2  |
+      2   |    q2  |  0.31783682  |  1.8049208  |     9  |     2  |
+      3   |    q2  |  0.11594202  |  0.91204923  |     9  |     2  |
+      4   |    q2  |  0.262571162  |  1.052330721  |     9  |     2  |
+      5   |    q2  |  0.037072245  |  0.34710088  |     9  |     2  |
+      6   |    q2  |  61.604225  |  156.71538  |     9  |     2  |
+      7   |    q2  |  0.70987123  |  1.1023041  |     9  |     2  |
+      8   |    q2  |  2.224651614  |  2.82432041  |     9  |     2  |
+      9   |    q2  |  21.606882  | 32.71008  |     9  |     2  |
+     10   |    q2  |  0.032565527  |  0.5330472  |     9  |     2  |
+     11   |    q2  |  0.167119555  |  0.41492398  |     9  |     2  |
+     12   |    q2  |  0.20095313  |  0.8156682  |     9  |     2  |
+     13   |    q2  |  0.028571427  |  0.60762507  |     9  |     2  |
+     14   |    q2  |  0.369585255  |  1.294201615  |     9  |     2  |
+     15   |    q2  |  0.577396675  |  3.2714286  |     9  |     2  |
+     16   |    q2  |  0.8552996  |  1.2952547  |     9  |     2  |
+-----------------------------------------------------------------------------
+
+Prep. time used: 74.0 ms
+Beginning to search: expect a status report every 20.0 s
+
+Status:  Networks 37895041
+         Time     20.0 s (33.3% of max. 1.0 m)
+         Restarts 6965
+         Banjo is using 5 mb of memory
+
+Status:  Networks 72764353
+         Time     40.0 s (66.6% of max. 1.0 m)
+         Restarts 13375
+         Banjo is using 5 mb of memory
+
+Status:  Networks 105427201
+         Time     1.0 m (100.0% of max. 1.0 m)
+         Restarts 19379
+         Banjo is using 5 mb of memory
+
+-----------------------------------------------------------------------------
+- Intermediate report                                  Best network(s) so far
+-----------------------------------------------------------------------------
+
+Network #1, score: -95.8510, first found at iteration 5441
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   2 4 12         
+ 5   1:   2 5 14         
+ 6   1:   3 0 6 9        
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   3 0 9 15       
+16   1:   2 9 16         
+
+Network #2, score: -96.1383, first found at iteration 5169
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   3 0 6 9        
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   3 0 9 15       
+16   1:   2 9 16         
+
+Network #3, score: -96.5721, first found at iteration 4897
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   3 0 6 9        
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   2 9 15         
+16   1:   2 9 16         
+
+Network #4, score: -97.0060, first found at iteration 4625
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   2 6 9          
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   2 9 15         
+16   1:   2 9 16         
+
+Network #5, score: -98.1513, first found at iteration 4353
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   2 2 4          
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   2 6 9          
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   2 9 15         
+16   1:   2 9 16         
+
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+- Final report                                          Best networks overall
+-----------------------------------------------------------------------------
+These are the 5 top-scoring non-identical networks found during the search: 
+
+Network #1, score: -95.8510, first found at iteration 5441
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   2 4 12         
+ 5   1:   2 5 14         
+ 6   1:   3 0 6 9        
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   3 0 9 15       
+16   1:   2 9 16         
+
+Network #2, score: -96.1383, first found at iteration 5169
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   3 0 6 9        
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   3 0 9 15       
+16   1:   2 9 16         
+
+Network #3, score: -96.5721, first found at iteration 4897
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   3 0 6 9        
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   2 9 15         
+16   1:   2 9 16         
+
+Network #4, score: -97.0060, first found at iteration 4625
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   2 6 9          
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   2 9 15         
+16   1:   2 9 16         
+
+Network #5, score: -98.1513, first found at iteration 4353
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   2 2 4          
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   2 6 9          
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   2 9 15         
+16   1:   2 9 16         
+
+
+-----------------------------------------------------------------------------
+- Search Statistics                                                          
+-----------------------------------------------------------------------------
+
+Statistics collected in searcher 'SearcherGreedy':
+  Number of networks examined: 105427201
+  Total time used: 1.0 m
+  High score: -95.8510, first found at iteration 5441
+  Number of restarts: 19380
+
+Statistics collected in proposer 'ProposerAllLocalMoves':
+  Additions -- proposed:    101745000
+  Deletions -- proposed:    3682200
+  Reversals -- proposed:    0 (min. Markov lag = 1)
+
+Statistics collected in cycle checker 'CycleCheckerCheckThenApply':
+  Additions -- no cyclicity test necessary
+  Deletions -- no cyclicity test necessary
+  Reversals -- none proposed
+
+Statistics collected in evaluator 'EvaluatorBDe':
+  Scores computed:          44709961
+  Scores (cache)            placed         fetched        
+      with 0 parents:       0              0              
+      with 1 parents:       17             3313997        
+      with 2 parents:       272            53081820       
+      with 3 parents:       40291029       4573671        
+      with 4 parents:       4418643        465117         
+      with 5 parents:       0              0              
+
+Statistics collected in decider 'DeciderGreedy':
+  Additions -- considered:  387600,  better score:  387600
+  Deletions -- considered:  0,  better score:  0
+  Reversals -- considered:  0 (min. Markov lag = 1)
+
+No Statistics collected in equivalence checker 'EquivalenceCheckerSkip'.
+
+Memory info after completing the search: Banjo is using 5 mb of memory
+
+
+Network #1, score: -95.8510, found by thread 1
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   2 4 12         
+ 5   1:   2 5 14         
+ 6   1:   3 0 6 9        
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   3 0 9 15       
+16   1:   2 9 16         
+
+Network #2, score: -96.1383, found by thread 1
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   3 0 6 9        
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   3 0 9 15       
+16   1:   2 9 16         
+
+Network #3, score: -96.5721, found by thread 1
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   3 0 6 9        
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   2 9 15         
+16   1:   2 9 16         
+
+Network #4, score: -97.0060, found by thread 1
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   3 2 4 14       
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   2 6 9          
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   2 9 15         
+16   1:   2 9 16         
+
+Network #5, score: -98.1513, found by thread 1
+17
+ 0   1:   1 0            
+ 1   1:   2 1 16         
+ 2   1:   2 2 4          
+ 3   1:   1 3            
+ 4   1:   1 4            
+ 5   1:   2 5 14         
+ 6   1:   2 6 9          
+ 7   1:   2 7 16         
+ 8   1:   2 8 14         
+ 9   1:   2 1 9          
+10   1:   2 1 10         
+11   1:   3 8 11 14      
+12   1:   2 12 16        
+13   1:   3 2 8 13       
+14   1:   2 12 14        
+15   1:   2 9 15         
+16   1:   2 9 16         
+
+-----------------------------------------------------------------------------
+- Post-processing                                            Influence scores
+-----------------------------------------------------------------------------
+
+Influence score for   (0,1) ->   (0,0)   .7172
+Influence score for  (16,1) ->   (1,0)   -.1268
+Influence score for   (1,1) ->   (1,0)   .0824
+Influence score for  (14,1) ->   (2,0)   -.0154
+Influence score for   (4,1) ->   (2,0)   .4599
+Influence score for   (2,1) ->   (2,0)   .0154
+Influence score for   (3,1) ->   (3,0)   -.3131
+Influence score for  (12,1) ->   (4,0)   -.5077
+Influence score for   (4,1) ->   (4,0)   .1077
+Influence score for  (14,1) ->   (5,0)   .6615
+Influence score for   (5,1) ->   (5,0)   -.2615
+Influence score for   (9,1) ->   (6,0)   -.6936
+Influence score for   (6,1) ->   (6,0)   .2214
+Influence score for   (0,1) ->   (6,0)   -.1953
+Influence score for  (16,1) ->   (7,0)   .1268
+Influence score for   (7,1) ->   (7,0)   .0824
+Influence score for  (14,1) ->   (8,0)   .1453
+Influence score for   (8,1) ->   (8,0)   -.1453
+Influence score for   (9,1) ->   (9,0)   -.1453
+Influence score for   (1,1) ->   (9,0)   .1453
+Influence score for  (10,1) ->  (10,0)   -.2855
+Influence score for   (1,1) ->  (10,0)   -.3299
+Influence score for  (14,1) ->  (11,0)   .0139
+Influence score for  (11,1) ->  (11,0)   -.0139
+Influence score for   (8,1) ->  (11,0)   -.4845
+Influence score for  (16,1) ->  (12,0)   .3206
+Influence score for  (12,1) ->  (12,0)   -.3762
+Influence score for  (13,1) ->  (13,0)   -.2157
+Influence score for   (8,1) ->  (13,0)   .2157
+Influence score for   (2,1) ->  (13,0)   -.2288
+Influence score for  (14,1) ->  (14,0)   -.0085
+Influence score for  (12,1) ->  (14,0)   .8974
+Influence score for  (15,1) ->  (15,0)   .2214
+Influence score for   (9,1) ->  (15,0)   -.6936
+Influence score for   (0,1) ->  (15,0)   -.1953
+Influence score for  (16,1) ->  (16,0)   .0824
+Influence score for   (9,1) ->  (16,0)   -.7621
+-----------------------------------------------------------------------------
+- Post-processing                                  DOT graphics format output
+-----------------------------------------------------------------------------
+digraph {
+node[shape=box];
+    0 [label="ALOX15"];
+    1 [label="ALOX15B"];
+    2 [label="ANPEP"];
+    4 [label="ERG"];
+    5 [label="F5"];
+    6 [label="GDF15"];
+    7 [label="GHR"];
+    8 [label="HPGD"];
+    9 [label="HPN"];
+    10 [label="IL6"];
+    11 [label="IL8"];
+    12 [label="KRT5"];
+    13 [label="PLA2G7"];
+    14 [label="PLAUR"];
+    15 [label="SERPINB5"];
+    16 [label="TRIM29"];
+16->1[arrowhead = dot, label=-1268];
+4->2[label=4599];
+14->2[arrowhead = dot, label=-154];
+12->4[arrowhead = dot, label=-5077];
+14->5[label=6615];
+0->6[arrowhead = dot, label=-1953];
+9->6[arrowhead = dot, label=-6936];
+16->7[label=1268];
+14->8[label=1453];
+1->9[label=1453];
+1->10[arrowhead = dot, label=-3299];
+8->11[arrowhead = dot, label=-4845];
+14->11[label=139];
+16->12[label=3206];
+2->13[arrowhead = dot, label=-2288];
+8->13[label=2157];
+12->14[label=8974];
+0->15[arrowhead = dot, label=-1953];
+9->15[arrowhead = dot, label=-6936];
+9->16[arrowhead = dot, label=-7621];
+}
+
+
+-----------------------------------------------------------------------------
+- Post-processing                                             Consensus graph
+-----------------------------------------------------------------------------
+
+17
+ 0  1:1 0  	  
+ 1  1:2 1 16  	  
+ 2  1:3 2 4 14  	  
+ 3  1:1 3  	  
+ 4  1:1 4  	  
+ 5  1:2 5 14  	  
+ 6  1:3 0 6 9  	  
+ 7  1:2 7 16  	  
+ 8  1:2 8 14  	  
+ 9  1:2 1 9  	  
+10  1:2 1 10  	  
+11  1:3 8 11 14  	  
+12  1:2 12 16  	  
+13  1:3 2 8 13  	  
+14  1:2 12 14  	  
+15  1:3 0 9 15  	  
+16  1:2 9 16  	  
+
+digraph abstract { 
+
+label = "Banjo Version 2.2.0\nConsensus graph (based on top 5 networks)\nProject: banjo dynamic example\nUser: demo\nDataset: 20-vars-2000-temporal-observations"; 
+labeljust="l"; 
+
+    0 [label="ALOX15"];
+    1 [label="ALOX15B"];
+    2 [label="ANPEP"];
+    3 [label="CNTNAP2"];
+    4 [label="ERG"];
+    5 [label="F5"];
+    6 [label="GDF15"];
+    7 [label="GHR"];
+    8 [label="HPGD"];
+    9 [label="HPN"];
+    10 [label="IL6"];
+    11 [label="IL8"];
+    12 [label="KRT5"];
+    13 [label="PLA2G7"];
+    14 [label="PLAUR"];
+    15 [label="SERPINB5"];
+    16 [label="TRIM29"];
+
+    16->1;
+    4->2;
+    14->2;
+    14->5;
+    0->6;
+    9->6;
+    16->7;
+    14->8;
+    1->9;
+    1->10;
+    8->11;
+    14->11;
+    16->12;
+    2->13;
+    8->13;
+    12->14;
+    0->15;
+    9->15;
+    9->16;
+}
+
+
+-----------------------------------------------------------------------------
+- Post-processing                   Consensus graph and n-best graphs as HTML
+-----------------------------------------------------------------------------
+For max. Markov lag > 0, this feature is not available. 
+
+
+-----------------------------------------------------------------------------
+- Post-processing                                            Influence scores
+-----------------------------------------------------------------------------
+
+Influence score for   (0,1) ->   (0,0)   .7172
+Influence score for  (16,1) ->   (1,0)   -.1268
+Influence score for   (1,1) ->   (1,0)   .0824
+Influence score for  (14,1) ->   (2,0)   -.0154
+Influence score for   (4,1) ->   (2,0)   .4599
+Influence score for   (2,1) ->   (2,0)   .0154
+Influence score for   (3,1) ->   (3,0)   -.3131
+Influence score for   (4,1) ->   (4,0)   .3131
+Influence score for  (14,1) ->   (5,0)   .6615
+Influence score for   (5,1) ->   (5,0)   -.2615
+Influence score for   (9,1) ->   (6,0)   -.6936
+Influence score for   (6,1) ->   (6,0)   .2214
+Influence score for   (0,1) ->   (6,0)   -.1953
+Influence score for  (16,1) ->   (7,0)   .1268
+Influence score for   (7,1) ->   (7,0)   .0824
+Influence score for  (14,1) ->   (8,0)   .1453
+Influence score for   (8,1) ->   (8,0)   -.1453
+Influence score for   (9,1) ->   (9,0)   -.1453
+Influence score for   (1,1) ->   (9,0)   .1453
+Influence score for  (10,1) ->  (10,0)   -.2855
+Influence score for   (1,1) ->  (10,0)   -.3299
+Influence score for  (14,1) ->  (11,0)   .0139
+Influence score for  (11,1) ->  (11,0)   -.0139
+Influence score for   (8,1) ->  (11,0)   -.4845
+Influence score for  (16,1) ->  (12,0)   .3206
+Influence score for  (12,1) ->  (12,0)   -.3762
+Influence score for  (13,1) ->  (13,0)   -.2157
+Influence score for   (8,1) ->  (13,0)   .2157
+Influence score for   (2,1) ->  (13,0)   -.2288
+Influence score for  (14,1) ->  (14,0)   -.0085
+Influence score for  (12,1) ->  (14,0)   .8974
+Influence score for  (15,1) ->  (15,0)   .2214
+Influence score for   (9,1) ->  (15,0)   -.6936
+Influence score for   (0,1) ->  (15,0)   -.1953
+Influence score for  (16,1) ->  (16,0)   .0824
+Influence score for   (9,1) ->  (16,0)   -.7621
+-----------------------------------------------------------------------------
+- Post-processing                                  DOT graphics format output
+-----------------------------------------------------------------------------
+digraph {
+node[shape=box];
+    0 [label="ALOX15"];
+    1 [label="ALOX15B"];
+    2 [label="ANPEP"];
+    4 [label="ERG"];
+    5 [label="F5"];
+    6 [label="GDF15"];
+    7 [label="GHR"];
+    8 [label="HPGD"];
+    9 [label="HPN"];
+    10 [label="IL6"];
+    11 [label="IL8"];
+    12 [label="KRT5"];
+    13 [label="PLA2G7"];
+    14 [label="PLAUR"];
+    15 [label="SERPINB5"];
+    16 [label="TRIM29"];
+16->1[arrowhead = dot, label=-1268];
+4->2[label=4599];
+14->2[arrowhead = dot, label=-154];
+14->5[label=6615];
+0->6[arrowhead = dot, label=-1953];
+9->6[arrowhead = dot, label=-6936];
+16->7[label=1268];
+14->8[label=1453];
+1->9[label=1453];
+1->10[arrowhead = dot, label=-3299];
+8->11[arrowhead = dot, label=-4845];
+14->11[label=139];
+16->12[label=3206];
+2->13[arrowhead = dot, label=-2288];
+8->13[label=2157];
+12->14[label=8974];
+0->15[arrowhead = dot, label=-1953];
+9->15[arrowhead = dot, label=-6936];
+9->16[arrowhead = dot, label=-7621];
+}
+
+
+-----------------------------------------------------------------------------
+- Post-processing                                             Consensus graph
+-----------------------------------------------------------------------------
+
+17
+ 0  1:1 0  	  
+ 1  1:2 1 16  	  
+ 2  1:3 2 4 14  	  
+ 3  1:1 3  	  
+ 4  1:1 4  	  
+ 5  1:2 5 14  	  
+ 6  1:3 0 6 9  	  
+ 7  1:2 7 16  	  
+ 8  1:2 8 14  	  
+ 9  1:2 1 9  	  
+10  1:2 1 10  	  
+11  1:3 8 11 14  	  
+12  1:2 12 16  	  
+13  1:3 2 8 13  	  
+14  1:2 12 14  	  
+15  1:3 0 9 15  	  
+16  1:2 9 16  	  
+
+digraph abstract { 
+
+label = "Banjo Version 2.2.0\nConsensus graph (based on top 5 networks)\nProject: banjo dynamic example\nUser: demo\nDataset: 20-vars-2000-temporal-observations"; 
+labeljust="l"; 
+
+    0 [label="ALOX15"];
+    1 [label="ALOX15B"];
+    2 [label="ANPEP"];
+    3 [label="CNTNAP2"];
+    4 [label="ERG"];
+    5 [label="F5"];
+    6 [label="GDF15"];
+    7 [label="GHR"];
+    8 [label="HPGD"];
+    9 [label="HPN"];
+    10 [label="IL6"];
+    11 [label="IL8"];
+    12 [label="KRT5"];
+    13 [label="PLA2G7"];
+    14 [label="PLAUR"];
+    15 [label="SERPINB5"];
+    16 [label="TRIM29"];
+
+    16->1;
+    4->2;
+    14->2;
+    14->5;
+    0->6;
+    9->6;
+    16->7;
+    14->8;
+    1->9;
+    1->10;
+    8->11;
+    14->11;
+    16->12;
+    2->13;
+    8->13;
+    12->14;
+    0->15;
+    9->15;
+    9->16;
+}
+
+
+-----------------------------------------------------------------------------
+- Post-processing                   Consensus graph and n-best graphs as HTML
+-----------------------------------------------------------------------------
+For max. Markov lag > 0, this feature is not available. 
+
+
+-----------------------------------------------------------------------------
+- Post-processing                                            Influence scores
+-----------------------------------------------------------------------------
+
+Influence score for   (0,1) ->   (0,0)   .7172
+Influence score for  (16,1) ->   (1,0)   -.1268
+Influence score for   (1,1) ->   (1,0)   .0824
+Influence score for  (14,1) ->   (2,0)   -.0154
+Influence score for   (4,1) ->   (2,0)   .4599
+Influence score for   (2,1) ->   (2,0)   .0154
+Influence score for   (3,1) ->   (3,0)   -.3131
+Influence score for   (4,1) ->   (4,0)   .3131
+Influence score for  (14,1) ->   (5,0)   .6615
+Influence score for   (5,1) ->   (5,0)   -.2615
+Influence score for   (9,1) ->   (6,0)   -.6936
+Influence score for   (6,1) ->   (6,0)   .2214
+Influence score for   (0,1) ->   (6,0)   -.1953
+Influence score for  (16,1) ->   (7,0)   .1268
+Influence score for   (7,1) ->   (7,0)   .0824
+Influence score for  (14,1) ->   (8,0)   .1453
+Influence score for   (8,1) ->   (8,0)   -.1453
+Influence score for   (9,1) ->   (9,0)   -.1453
+Influence score for   (1,1) ->   (9,0)   .1453
+Influence score for  (10,1) ->  (10,0)   -.2855
+Influence score for   (1,1) ->  (10,0)   -.3299
+Influence score for  (14,1) ->  (11,0)   .0139
+Influence score for  (11,1) ->  (11,0)   -.0139
+Influence score for   (8,1) ->  (11,0)   -.4845
+Influence score for  (16,1) ->  (12,0)   .3206
+Influence score for  (12,1) ->  (12,0)   -.3762
+Influence score for  (13,1) ->  (13,0)   -.2157
+Influence score for   (8,1) ->  (13,0)   .2157
+Influence score for   (2,1) ->  (13,0)   -.2288
+Influence score for  (14,1) ->  (14,0)   -.0085
+Influence score for  (12,1) ->  (14,0)   .8974
+Influence score for  (15,1) ->  (15,0)   .2615
+Influence score for   (9,1) ->  (15,0)   -.6615
+Influence score for  (16,1) ->  (16,0)   .0824
+Influence score for   (9,1) ->  (16,0)   -.7621
+-----------------------------------------------------------------------------
+- Post-processing                                  DOT graphics format output
+-----------------------------------------------------------------------------
+digraph {
+node[shape=box];
+    0 [label="ALOX15"];
+    1 [label="ALOX15B"];
+    2 [label="ANPEP"];
+    4 [label="ERG"];
+    5 [label="F5"];
+    6 [label="GDF15"];
+    7 [label="GHR"];
+    8 [label="HPGD"];
+    9 [label="HPN"];
+    10 [label="IL6"];
+    11 [label="IL8"];
+    12 [label="KRT5"];
+    13 [label="PLA2G7"];
+    14 [label="PLAUR"];
+    15 [label="SERPINB5"];
+    16 [label="TRIM29"];
+16->1[arrowhead = dot, label=-1268];
+4->2[label=4599];
+14->2[arrowhead = dot, label=-154];
+14->5[label=6615];
+0->6[arrowhead = dot, label=-1953];
+9->6[arrowhead = dot, label=-6936];
+16->7[label=1268];
+14->8[label=1453];
+1->9[label=1453];
+1->10[arrowhead = dot, label=-3299];
+8->11[arrowhead = dot, label=-4845];
+14->11[label=139];
+16->12[label=3206];
+2->13[arrowhead = dot, label=-2288];
+8->13[label=2157];
+12->14[label=8974];
+9->15[arrowhead = dot, label=-6615];
+9->16[arrowhead = dot, label=-7621];
+}
+
+
+-----------------------------------------------------------------------------
+- Post-processing                                             Consensus graph
+-----------------------------------------------------------------------------
+
+17
+ 0  1:1 0  	  
+ 1  1:2 1 16  	  
+ 2  1:3 2 4 14  	  
+ 3  1:1 3  	  
+ 4  1:1 4  	  
+ 5  1:2 5 14  	  
+ 6  1:3 0 6 9  	  
+ 7  1:2 7 16  	  
+ 8  1:2 8 14  	  
+ 9  1:2 1 9  	  
+10  1:2 1 10  	  
+11  1:3 8 11 14  	  
+12  1:2 12 16  	  
+13  1:3 2 8 13  	  
+14  1:2 12 14  	  
+15  1:3 0 9 15  	  
+16  1:2 9 16  	  
+
+digraph abstract { 
+
+label = "Banjo Version 2.2.0\nConsensus graph (based on top 5 networks)\nProject: banjo dynamic example\nUser: demo\nDataset: 20-vars-2000-temporal-observations"; 
+labeljust="l"; 
+
+    0 [label="ALOX15"];
+    1 [label="ALOX15B"];
+    2 [label="ANPEP"];
+    3 [label="CNTNAP2"];
+    4 [label="ERG"];
+    5 [label="F5"];
+    6 [label="GDF15"];
+    7 [label="GHR"];
+    8 [label="HPGD"];
+    9 [label="HPN"];
+    10 [label="IL6"];
+    11 [label="IL8"];
+    12 [label="KRT5"];
+    13 [label="PLA2G7"];
+    14 [label="PLAUR"];
+    15 [label="SERPINB5"];
+    16 [label="TRIM29"];
+
+    16->1;
+    4->2;
+    14->2;
+    14->5;
+    0->6;
+    9->6;
+    16->7;
+    14->8;
+    1->9;
+    1->10;
+    8->11;
+    14->11;
+    16->12;
+    2->13;
+    8->13;
+    12->14;
+    0->15;
+    9->15;
+    9->16;
+}
+
+
+-----------------------------------------------------------------------------
+- Post-processing                   Consensus graph and n-best graphs as HTML
+-----------------------------------------------------------------------------
+For max. Markov lag > 0, this feature is not available. 
+
+
+-----------------------------------------------------------------------------
+- Post-processing                                            Influence scores
+-----------------------------------------------------------------------------
+
+Influence score for   (0,1) ->   (0,0)   .7172
+Influence score for  (16,1) ->   (1,0)   -.1268
+Influence score for   (1,1) ->   (1,0)   .0824
+Influence score for  (14,1) ->   (2,0)   -.0154
+Influence score for   (4,1) ->   (2,0)   .4599
+Influence score for   (2,1) ->   (2,0)   .0154
+Influence score for   (3,1) ->   (3,0)   -.3131
+Influence score for   (4,1) ->   (4,0)   .3131
+Influence score for  (14,1) ->   (5,0)   .6615
+Influence score for   (5,1) ->   (5,0)   -.2615
+Influence score for   (9,1) ->   (6,0)   -.6615
+Influence score for   (6,1) ->   (6,0)   .2615
+Influence score for  (16,1) ->   (7,0)   .1268
+Influence score for   (7,1) ->   (7,0)   .0824
+Influence score for  (14,1) ->   (8,0)   .1453
+Influence score for   (8,1) ->   (8,0)   -.1453
+Influence score for   (9,1) ->   (9,0)   -.1453
+Influence score for   (1,1) ->   (9,0)   .1453
+Influence score for  (10,1) ->  (10,0)   -.2855
+Influence score for   (1,1) ->  (10,0)   -.3299
+Influence score for  (14,1) ->  (11,0)   .0139
+Influence score for  (11,1) ->  (11,0)   -.0139
+Influence score for   (8,1) ->  (11,0)   -.4845
+Influence score for  (16,1) ->  (12,0)   .3206
+Influence score for  (12,1) ->  (12,0)   -.3762
+Influence score for  (13,1) ->  (13,0)   -.2157
+Influence score for   (8,1) ->  (13,0)   .2157
+Influence score for   (2,1) ->  (13,0)   -.2288
+Influence score for  (14,1) ->  (14,0)   -.0085
+Influence score for  (12,1) ->  (14,0)   .8974
+Influence score for  (15,1) ->  (15,0)   .2615
+Influence score for   (9,1) ->  (15,0)   -.6615
+Influence score for  (16,1) ->  (16,0)   .0824
+Influence score for   (9,1) ->  (16,0)   -.7621
+-----------------------------------------------------------------------------
+- Post-processing                                  DOT graphics format output
+-----------------------------------------------------------------------------
+digraph {
+node[shape=box];
+    1 [label="ALOX15B"];
+    2 [label="ANPEP"];
+    4 [label="ERG"];
+    5 [label="F5"];
+    6 [label="GDF15"];
+    7 [label="GHR"];
+    8 [label="HPGD"];
+    9 [label="HPN"];
+    10 [label="IL6"];
+    11 [label="IL8"];
+    12 [label="KRT5"];
+    13 [label="PLA2G7"];
+    14 [label="PLAUR"];
+    15 [label="SERPINB5"];
+    16 [label="TRIM29"];
+16->1[arrowhead = dot, label=-1268];
+4->2[label=4599];
+14->2[arrowhead = dot, label=-154];
+14->5[label=6615];
+9->6[arrowhead = dot, label=-6615];
+16->7[label=1268];
+14->8[label=1453];
+1->9[label=1453];
+1->10[arrowhead = dot, label=-3299];
+8->11[arrowhead = dot, label=-4845];
+14->11[label=139];
+16->12[label=3206];
+2->13[arrowhead = dot, label=-2288];
+8->13[label=2157];
+12->14[label=8974];
+9->15[arrowhead = dot, label=-6615];
+9->16[arrowhead = dot, label=-7621];
+}
+
+
+-----------------------------------------------------------------------------
+- Post-processing                                             Consensus graph
+-----------------------------------------------------------------------------
+
+17
+ 0  1:1 0  	  
+ 1  1:2 1 16  	  
+ 2  1:3 2 4 14  	  
+ 3  1:1 3  	  
+ 4  1:1 4  	  
+ 5  1:2 5 14  	  
+ 6  1:3 0 6 9  	  
+ 7  1:2 7 16  	  
+ 8  1:2 8 14  	  
+ 9  1:2 1 9  	  
+10  1:2 1 10  	  
+11  1:3 8 11 14  	  
+12  1:2 12 16  	  
+13  1:3 2 8 13  	  
+14  1:2 12 14  	  
+15  1:3 0 9 15  	  
+16  1:2 9 16  	  
+
+digraph abstract { 
+
+label = "Banjo Version 2.2.0\nConsensus graph (based on top 5 networks)\nProject: banjo dynamic example\nUser: demo\nDataset: 20-vars-2000-temporal-observations"; 
+labeljust="l"; 
+
+    0 [label="ALOX15"];
+    1 [label="ALOX15B"];
+    2 [label="ANPEP"];
+    3 [label="CNTNAP2"];
+    4 [label="ERG"];
+    5 [label="F5"];
+    6 [label="GDF15"];
+    7 [label="GHR"];
+    8 [label="HPGD"];
+    9 [label="HPN"];
+    10 [label="IL6"];
+    11 [label="IL8"];
+    12 [label="KRT5"];
+    13 [label="PLA2G7"];
+    14 [label="PLAUR"];
+    15 [label="SERPINB5"];
+    16 [label="TRIM29"];
+
+    16->1;
+    4->2;
+    14->2;
+    14->5;
+    0->6;
+    9->6;
+    16->7;
+    14->8;
+    1->9;
+    1->10;
+    8->11;
+    14->11;
+    16->12;
+    2->13;
+    8->13;
+    12->14;
+    0->15;
+    9->15;
+    9->16;
+}
+
+
+-----------------------------------------------------------------------------
+- Post-processing                   Consensus graph and n-best graphs as HTML
+-----------------------------------------------------------------------------
+For max. Markov lag > 0, this feature is not available. 
+
+
+-----------------------------------------------------------------------------
+- Post-processing                                            Influence scores
+-----------------------------------------------------------------------------
+
+Influence score for   (0,1) ->   (0,0)   .7172
+Influence score for  (16,1) ->   (1,0)   -.1268
+Influence score for   (1,1) ->   (1,0)   .0824
+Influence score for   (4,1) ->   (2,0)   .6752
+Influence score for   (2,1) ->   (2,0)   .2308
+Influence score for   (3,1) ->   (3,0)   -.3131
+Influence score for   (4,1) ->   (4,0)   .3131
+Influence score for  (14,1) ->   (5,0)   .6615
+Influence score for   (5,1) ->   (5,0)   -.2615
+Influence score for   (9,1) ->   (6,0)   -.6615
+Influence score for   (6,1) ->   (6,0)   .2615
+Influence score for  (16,1) ->   (7,0)   .1268
+Influence score for   (7,1) ->   (7,0)   .0824
+Influence score for  (14,1) ->   (8,0)   .1453
+Influence score for   (8,1) ->   (8,0)   -.1453
+Influence score for   (9,1) ->   (9,0)   -.1453
+Influence score for   (1,1) ->   (9,0)   .1453
+Influence score for  (10,1) ->  (10,0)   -.2855
+Influence score for   (1,1) ->  (10,0)   -.3299
+Influence score for  (14,1) ->  (11,0)   .0139
+Influence score for  (11,1) ->  (11,0)   -.0139
+Influence score for   (8,1) ->  (11,0)   -.4845
+Influence score for  (16,1) ->  (12,0)   .3206
+Influence score for  (12,1) ->  (12,0)   -.3762
+Influence score for  (13,1) ->  (13,0)   -.2157
+Influence score for   (8,1) ->  (13,0)   .2157
+Influence score for   (2,1) ->  (13,0)   -.2288
+Influence score for  (14,1) ->  (14,0)   -.0085
+Influence score for  (12,1) ->  (14,0)   .8974
+Influence score for  (15,1) ->  (15,0)   .2615
+Influence score for   (9,1) ->  (15,0)   -.6615
+Influence score for  (16,1) ->  (16,0)   .0824
+Influence score for   (9,1) ->  (16,0)   -.7621
+-----------------------------------------------------------------------------
+- Post-processing                                  DOT graphics format output
+-----------------------------------------------------------------------------
+digraph {
+node[shape=box];
+    1 [label="ALOX15B"];
+    2 [label="ANPEP"];
+    4 [label="ERG"];
+    5 [label="F5"];
+    6 [label="GDF15"];
+    7 [label="GHR"];
+    8 [label="HPGD"];
+    9 [label="HPN"];
+    10 [label="IL6"];
+    11 [label="IL8"];
+    12 [label="KRT5"];
+    13 [label="PLA2G7"];
+    14 [label="PLAUR"];
+    15 [label="SERPINB5"];
+    16 [label="TRIM29"];
+16->1[arrowhead = dot, label=-1268];
+4->2[label=6752];
+14->5[label=6615];
+9->6[arrowhead = dot, label=-6615];
+16->7[label=1268];
+14->8[label=1453];
+1->9[label=1453];
+1->10[arrowhead = dot, label=-3299];
+8->11[arrowhead = dot, label=-4845];
+14->11[label=139];
+16->12[label=3206];
+2->13[arrowhead = dot, label=-2288];
+8->13[label=2157];
+12->14[label=8974];
+9->15[arrowhead = dot, label=-6615];
+9->16[arrowhead = dot, label=-7621];
+}
+
+
+-----------------------------------------------------------------------------
+- Post-processing                                             Consensus graph
+-----------------------------------------------------------------------------
+
+17
+ 0  1:1 0  	  
+ 1  1:2 1 16  	  
+ 2  1:3 2 4 14  	  
+ 3  1:1 3  	  
+ 4  1:1 4  	  
+ 5  1:2 5 14  	  
+ 6  1:3 0 6 9  	  
+ 7  1:2 7 16  	  
+ 8  1:2 8 14  	  
+ 9  1:2 1 9  	  
+10  1:2 1 10  	  
+11  1:3 8 11 14  	  
+12  1:2 12 16  	  
+13  1:3 2 8 13  	  
+14  1:2 12 14  	  
+15  1:3 0 9 15  	  
+16  1:2 9 16  	  
+
+digraph abstract { 
+
+label = "Banjo Version 2.2.0\nConsensus graph (based on top 5 networks)\nProject: banjo dynamic example\nUser: demo\nDataset: 20-vars-2000-temporal-observations"; 
+labeljust="l"; 
+
+    0 [label="ALOX15"];
+    1 [label="ALOX15B"];
+    2 [label="ANPEP"];
+    3 [label="CNTNAP2"];
+    4 [label="ERG"];
+    5 [label="F5"];
+    6 [label="GDF15"];
+    7 [label="GHR"];
+    8 [label="HPGD"];
+    9 [label="HPN"];
+    10 [label="IL6"];
+    11 [label="IL8"];
+    12 [label="KRT5"];
+    13 [label="PLA2G7"];
+    14 [label="PLAUR"];
+    15 [label="SERPINB5"];
+    16 [label="TRIM29"];
+
+    16->1;
+    4->2;
+    14->2;
+    14->5;
+    0->6;
+    9->6;
+    16->7;
+    14->8;
+    1->9;
+    1->10;
+    8->11;
+    14->11;
+    16->12;
+    2->13;
+    8->13;
+    12->14;
+    0->15;
+    9->15;
+    9->16;
+}
+
+
+-----------------------------------------------------------------------------
+- Post-processing                   Consensus graph and n-best graphs as HTML
+-----------------------------------------------------------------------------
+For max. Markov lag > 0, this feature is not available. 
+
+
+
+-----------------------------------------------------------------------------
+(Final Checkpoint, after post-processing) A final check revealed the following issues that were encountered during Banjo's execution:
+-----------------------------------------------------------------------------
+('dot' execution) The attempted execution of 'dot' to create the graphics file '/Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output//top.graph.2015.05.24.23.22.502.jpg' did not succeed. No output has been produced.
+('dot' execution) The attempted execution of 'dot' to create the graphics file '/Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output//consensus.graph.2015.05.24.23.22.50.jpg' did not succeed. No output has been produced.
+('dot' execution) The attempted execution of 'dot' to create the graphics file '/Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output//consensus.graph.2015.05.24.23.22.50.jpg' did not succeed. No output has been produced.
+('dot' execution) The attempted execution of 'dot' to create the graphics file '/Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output//consensus.graph.2015.05.24.23.22.50.jpg' did not succeed. No output has been produced.
+('dot' execution) The attempted execution of 'dot' to create the graphics file '/Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output//top.graph.2015.05.24.23.22.504.jpg' did not succeed. No output has been produced.
+('dot' execution) The attempted execution of 'dot' to create the graphics file '/Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output//consensus.graph.2015.05.24.23.22.50.jpg' did not succeed. No output has been produced.
+('dot' execution) The attempted execution of 'dot' to create the graphics file '/Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output//top.graph.2015.05.24.23.22.503.jpg' did not succeed. No output has been produced.
+('dot' execution) The attempted execution of 'dot' to create the graphics file '/Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output//consensus.graph.2015.05.24.23.22.50.jpg' did not succeed. No output has been produced.
+('dot' execution) The attempted execution of 'dot' to create the graphics file '/Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output//top.graph.2015.05.24.23.22.501.jpg' did not succeed. No output has been produced.
+('dot' execution) The attempted execution of 'dot' to create the graphics file '/Users/hgong2/Desktop/Eclipse/Workspace/BanjoModified/data/Output//top.graph.2015.05.24.23.22.500.jpg' did not succeed. No output has been produced.
+

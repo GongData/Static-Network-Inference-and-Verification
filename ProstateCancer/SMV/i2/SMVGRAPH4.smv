@@ -1,0 +1,150 @@
+MODULE main
+
+  VAR
+
+		ALOX15: {-1, 0, 1};
+		ALOX15B: {-1, 0, 1};
+		ANPEP: {-1, 0, 1};
+		CNTNAP2: {-1, 0, 1};
+		ERG: {-1, 0, 1};
+		F5: {-1, 0, 1};
+		GDF15: {-1, 0, 1};
+		GHR: {-1, 0, 1};
+		HPGD: {-1, 0, 1};
+		HPN: {-1, 0, 1};
+		IL6: {-1, 0, 1};
+		IL8: {-1, 0, 1};
+		KRT5: {-1, 0, 1};
+		PLA2G7: {-1, 0, 1};
+		PLAUR: {-1, 0, 1};
+		SERPINB5: {-1, 0, 1};
+		TRIM29: {-1, 0, 1};
+
+
+    ASSIGN
+
+		init(ALOX15) := {-1, 0};
+		init(ALOX15B) := {-1, 0};
+		init(ANPEP) := {-1, 0};
+		init(CNTNAP2) := {-1, 0};
+		init(ERG) := {-1, 0};
+		init(F5) := {-1, 0};
+		init(GDF15) := {-1, 0};
+		init(GHR) := {-1, 0};
+		init(HPGD) := {-1, 0};
+		init(HPN) := {-1, 0};
+		init(IL6) := {-1, 0};
+		init(IL8) := {-1, 0};
+		init(KRT5) := {-1, 0};
+		init(PLA2G7) := {-1, 0};
+		init(PLAUR) := {-1, 0};
+		init(SERPINB5) := {-1, 0};
+		init(TRIM29) := {-1, 0};
+
+	 next(ALOX15) := ALOX15;
+
+	 next(ALOX15B) := ALOX15B;
+
+	 next(ANPEP) := 
+		 case 
+ 			  2603*IL6 +  2250*ERG > 0  : 1; 
+ 			  2603*IL6 +  2250*ERG = 0  : 0; 
+ 			  2603*IL6 +  2250*ERG < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(CNTNAP2) := 
+		 case 
+ 			  6900*IL6 > 0  : 1; 
+ 			  6900*IL6 = 0  : 0; 
+ 			  6900*IL6 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(ERG) := 
+		 case 
+ 			  6444*GDF15 > 0  : 1; 
+ 			  6444*GDF15 = 0  : 0; 
+ 			  6444*GDF15 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(F5) := 
+		 case 
+ 			  -175*HPGD +  27*ALOX15 > 0  : 1; 
+ 			  -175*HPGD +  27*ALOX15 = 0  : 0; 
+ 			  -175*HPGD +  27*ALOX15 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(GDF15) := 
+		 case 
+ 			  97*TRIM29 +  4950*ALOX15B > 0  : 1; 
+ 			  97*TRIM29 +  4950*ALOX15B = 0  : 0; 
+ 			  97*TRIM29 +  4950*ALOX15B < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(GHR) := 
+		 case 
+ 			  794*IL8 > 0  : 1; 
+ 			  794*IL8 = 0  : 0; 
+ 			  794*IL8 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(HPGD) := HPGD;
+
+	 next(HPN) := 
+		 case 
+ 			  391*IL6 +  4836*F5 > 0  : 1; 
+ 			  391*IL6 +  4836*F5 = 0  : 0; 
+ 			  391*IL6 +  4836*F5 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(IL6) := 
+		 case 
+ 			  -86*HPN > 0  : 1; 
+ 			  -86*HPN = 0  : 0; 
+ 			  -86*HPN < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(IL8) := IL8;
+
+	 next(KRT5) := 
+		 case 
+ 			  8206*IL8 > 0  : 1; 
+ 			  8206*IL8 = 0  : 0; 
+ 			  8206*IL8 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(PLA2G7) := 
+		 case 
+ 			  4424*IL6 > 0  : 1; 
+ 			  4424*IL6 = 0  : 0; 
+ 			  4424*IL6 < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(PLAUR) := PLAUR;
+
+	 next(SERPINB5) := 
+		 case 
+ 			  45*HPGD > 0  : 1; 
+ 			  45*HPGD = 0  : 0; 
+ 			  45*HPGD < 0  : -1; 
+ 			 
+ 		 esac; 
+
+	 next(TRIM29) := 
+		 case 
+ 			  5268*ERG > 0  : 1; 
+ 			  5268*ERG = 0  : 0; 
+ 			  5268*ERG < 0  : -1; 
+ 			 
+ 		 esac; 
+
+
